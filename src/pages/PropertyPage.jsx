@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import properties from "../data/properties.json";
 
 function PropertyPage() {
     const { id } = useParams();
