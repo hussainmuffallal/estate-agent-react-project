@@ -23,7 +23,11 @@ function SearchPage() {
             <ul>
                 {properties.map((property) => (
                     <li key={property.id}>
-                        <h2>{property.title}</h2>
+                        <h3>
+                            <Link to={`/property/${property.id}`}>
+                                {property.title}
+                            </Link>
+                        </h3>
                         <p>Type: {property.type}</p>
                         <p>Price: ${property.price.toLocaleString()}</p>
                     </li>
