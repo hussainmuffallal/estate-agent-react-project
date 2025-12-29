@@ -103,7 +103,7 @@ function PropertyPage() {
                 </TabPanel>
             </Tabs>
 
-            <p><strong>Price:</strong> ${property.price.toLocaleString()}</p>
+            <p><strong>Price:</strong> £{property.price.toLocaleString()}</p>
             <p><strong>Location:</strong> {property.location}</p>
         </div>
     );

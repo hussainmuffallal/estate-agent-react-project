@@ -20,19 +20,30 @@ function SearchPage() {
         <div>
             <h1>Search Page</h1>
 
-            <ul>
-                {properties.map((property) => (
-                    <li key={property.id}>
-                        <h3>
-                            <Link to={`/property/${property.id}`}>
-                                {property.title}
+            <div className="property-list">
+                {properties.map(property => (
+                    <div className="property-card" key={property.id}>
+
+                        {/* Property image */}
+                        <img
+                            src={`${import.meta.env.BASE_URL}${property.images[0]}`}
+                            alt={property.title}
+                            className="property-image"
+                        />
+
+                        {/* Property info */}
+                        <div className="property-info">
+                            <h3>{property.title}</h3>
+                            <p><strong>Price:</strong> £{property.price.toLocaleString()}</p>
+                            <p><strong>Location:</strong> {property.location}</p>
+                        
+                            <Link to={`/property/${property.id}`} className="view-button">
+                                View Details
                             </Link>
-                        </h3>
-                        <p>Type: {property.type}</p>
-                        <p>Price: ${property.price.toLocaleString()}</p>
-                    </li>
+                        </div>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }
