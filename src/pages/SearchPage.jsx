@@ -6,6 +6,8 @@ function SearchPage() {
     const [filters, setFilters] = useState({
         type: "all",
         minBedrooms: 0,
+        maxBedrooms: 100,
+        minPrice: 0,
         maxPrice: 10000000
     });
 
@@ -24,7 +26,11 @@ function SearchPage() {
     const filteredProperties = properties.filter((property) => {
         return (
             (filters.type === "all" || property.type === filters.type) &&
-            property.bedrooms >= filters.minBedrooms && 
+            
+            property.bedrooms >= filters.minBedrooms &&
+            property.bedrooms <= filters.maxBedrooms &&
+            
+            property.price >= filters.minPrice &&
             property.price <= filters.maxPrice
         );
     });
@@ -51,6 +57,22 @@ function SearchPage() {
                     placeholder="Min bedrooms"
                     onChange={(e) =>
                         setFilters({ ...filters, minBedrooms: Number(e.target.value) })
+                    }
+                />
+
+                <input
+                    type="number"
+                    placeholder="Max bedrooms"
+                    onChange={(e) =>
+                        setFilters({ ...filters, maxBedrooms: Number(e.target.value) })
+                    }
+                />
+
+                <input
+                    type="number"
+                    placeholder="Min price"
+                    onChange={(e) =>
+                        setFilters({ ...filters, minPrice: Number(e.target.value) })
                     }
                 />
 
