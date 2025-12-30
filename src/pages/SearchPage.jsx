@@ -8,7 +8,8 @@ function SearchPage() {
         minBedrooms: 0,
         maxBedrooms: 100,
         minPrice: 0,
-        maxPrice: 10000000
+        maxPrice: 10000000,
+        postcode: ""
     });
 
     useEffect(() => {
@@ -31,7 +32,9 @@ function SearchPage() {
             property.bedrooms <= filters.maxBedrooms &&
             
             property.price >= filters.minPrice &&
-            property.price <= filters.maxPrice
+            property.price <= filters.maxPrice &&
+
+            (filters.postcode === "" || property.postcode.startsWith(filters.postcode))
         );
     });
 
@@ -51,6 +54,15 @@ function SearchPage() {
                     <option value="house">House</option>
                     <option value="flat">Flat</option>
                 </select>
+
+                <input
+                    type="text"
+                    placeholder="Postcode area (e.g. BR5)"
+                    value={filters.postcode}
+                    onChange={(e) =>
+                        setFilters({ ...filters, postcode: e.target.value.toUpperCase() })
+                    }
+                />
 
                 <input
                     type="number"
