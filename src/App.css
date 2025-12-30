@@ -103,3 +103,23 @@
   gap: 1rem;
   margin-bottom: 2rem;
 }
+
+/* Search styling */
+.search-layout {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  gap: 1.5rem;
+}
+
+/* Favourites styling */
+.favourites-sidebar {
+  border-left: 2px solid #ddd;
+  padding-left: 1rem;
+}
+
+.favourites-item {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background: #f9f9f9;
+}

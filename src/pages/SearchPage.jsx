@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 function SearchPage() {
     const [properties, setProperties] = useState([]);
+    const [favourites, setFavourites] = useState([]);
     const [filters, setFilters] = useState({
         type: "all",
         minBedrooms: 0,
@@ -13,6 +14,15 @@ function SearchPage() {
         dateFrom: "",
         dateTo: ""
     });
+    const addToFavourites = (property) => {
+        const alreadyAdded = favourites.some(
+            fav => fav.id === property.id
+        );
+
+        if (!alreadyAdded) {
+            setFavourites([...favourites, property]);
+        }
+    };
 
     useEffect(() => {
         fetch(`${import.meta.env.BASE_URL}properties.json`)
@@ -24,6 +34,11 @@ function SearchPage() {
             .catch((error) => {
                 console.error("Error fetching properties:", error);
             });
+    }, []);
+
+    useEffect(() => {
+        const storedFavourites = JSON.parse(localStorage.getItem("favourites")) || []
+        setFavourites(storedFavourites);
     }, []);
 
     const filteredProperties = properties.filter((property) => {
@@ -149,10 +164,33 @@ function SearchPage() {
                             <Link to={`/property/${property.id}`} className="view-button">
                                 View Details
                             </Link>
+
+                            <button
+                                onClick={() => addToFavourites(property)}
+                                className="favourite-button"
+                            >
+                                ❤️ Add to favourites
+                            </button>
                         </div>
                     </div>
                 ))}
             </div>
+
+            {/* Favourites Sidebar */}
+            <aside className="favourites-sidebar">
+                <h2>Favourites</h2>
+
+                {favourites.length === 0 ? (
+                    <p>No favourites yet</p>
+                ) : (
+                    favourites.map(property => (
+                        <div key={property.id} className="favourites-item">
+                            <p>{property.title}</p>
+                            <p>£{property.price.toLocaleString()}</p>
+                        </div>
+                    ))
+                )}
+            </aside>
         </div>
     );
 }
