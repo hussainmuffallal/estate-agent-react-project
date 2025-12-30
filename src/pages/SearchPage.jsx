@@ -183,12 +183,32 @@ function SearchPage() {
                 {favourites.length === 0 ? (
                     <p>No favourites yet</p>
                 ) : (
-                    favourites.map(property => (
-                        <div key={property.id} className="favourites-item">
-                            <p>{property.title}</p>
-                            <p>£{property.price.toLocaleString()}</p>
-                        </div>
-                    ))
+                    <>
+                        {favourites.map(property => (
+                            <div key={property.id} className="favourites-item">
+                                <p>{property.title}</p>
+                                <p>£{property.price.toLocaleString()}</p>
+
+                                <button
+                                    onClick={() =>
+                                        setFavourites(
+                                            favourites.filter(item => item.id !== property.id)
+                                        )
+                                    }
+                                >
+                                    ❌ Remove
+                                </button>
+                            </div>
+                        ))}
+
+                        {/* Clear all favourites */}
+                        <button
+                            onClick={() => setFavourites([])}
+                            style={{ marginTop: "10px" }}
+                        >
+                            Clear favourites
+                        </button>
+                    </>
                 )}
             </aside>
         </div>
