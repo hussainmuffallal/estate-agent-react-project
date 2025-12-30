@@ -96,3 +96,10 @@
 .view-button:hover {
   background-color: #005fa3;
 }
+
+/* Filter styling */
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}

@@ -3,6 +3,11 @@ import { useEffect, useState } from "react";
 
 function SearchPage() {
     const [properties, setProperties] = useState([]);
+    const [filters, setFilters] = useState({
+        type: "all",
+        minBedrooms: 0,
+        maxPrice: 10000000
+    });
 
     useEffect(() => {
         fetch(`${import.meta.env.BASE_URL}properties.json`)
@@ -16,12 +21,51 @@ function SearchPage() {
             });
     }, []);
 
+    const filteredProperties = properties.filter((property) => {
+        return (
+            (filters.type === "all" || property.type === filters.type) &&
+            property.bedrooms >= filters.minBedrooms && 
+            property.price <= filters.maxPrice
+        );
+    });
+
     return (
         <div>
             <h1>Search Page</h1>
 
+            {/* Filters */}
+            <div className="filters">
+                <select
+                    value={filters.type}
+                    onChange={(e) =>
+                        setFilters({ ...filters, type: e.target.value })
+                    }
+                >
+                    <option value="all">All Types</option>
+                    <option value="house">House</option>
+                    <option value="flat">Flat</option>
+                </select>
+
+                <input
+                    type="number"
+                    placeholder="Min bedrooms"
+                    onChange={(e) =>
+                        setFilters({ ...filters, minBedrooms: Number(e.target.value) })
+                    }
+                />
+
+                <input
+                    type="number"
+                    placeholder="Max price"
+                    onChange={(e) =>
+                        setFilters({ ...filters, maxPrice: Number(e.target.value) })
+                    }
+                />
+            </div>
+            
+            {/* Property list */}
             <div className="property-list">
-                {properties.map(property => (
+                {filteredProperties.map(property => (
                     <div className="property-card" key={property.id}>
 
                         {/* Property image */}
