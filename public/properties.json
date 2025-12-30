@@ -10,7 +10,7 @@
 			"description":"Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
 			"location":"Petts Wood Road, Petts Wood, Orpington BR5",
             "postcode": "BR5",
-            "added": "2022-10-12",
+            "dateAdded": "2022-10-12",
             "images": [
                 "images/property1/1.jpg",
                 "images/property1/2.jpg",
@@ -34,7 +34,7 @@
 			"description":"Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms. This apartment being only five years old, is still under a 10 year building guarantee...",
 			"location":"Crofton Road, Orpington BR6",
             "postcode": "BR5",
-            "added": "2022-09-14",
+            "dateAdded": "2022-09-14",
             "images": [
                 "images/property2/1.jpg",
                 "images/property2/2.jpg",
@@ -58,7 +58,7 @@
 			"description":"A spacious detached house located in Camden, offering four bedrooms, a private garden, and excellent transport links.",
 			"location":"Camden, London NW1",
             "postcode": "NW1",
-            "added": "2022-11-16",
+            "dateAdded": "2022-11-16",
             "images": [
                 "images/property3/1.jpg",
                 "images/property3/2.jpg",
@@ -82,7 +82,7 @@
             "description": "A modern one-bedroom apartment located close to transport links and local amenities in Whitechapel.",
             "location":"Whitechapel, London E1",
             "postcode": "E1",
-            "added": "2022-12-18",
+            "dateAdded": "2022-12-18",
             "images": [
                 "images/property4/1.jpg",
                 "images/property4/2.jpg",
@@ -106,7 +106,7 @@
             "description": "An impressive five-bedroom family home with garden and parking, located in Battersea.",
             "location":"Battersea, London SW11",
             "postcode": "SW11",
-            "added": "2022-01-20",
+            "dateAdded": "2022-01-20",
             "images": [
                 "images/property5/1.jpg",
                 "images/property5/2.jpg",
@@ -130,7 +130,7 @@
             "description": "A compact studio flat ideal for first-time buyers, located close to transport links.",
             "location":"Southwark, London SE1",
             "postcode": "SE1",
-            "added": "2022-02-22",
+            "dateAdded": "2022-02-22",
             "images": [
                 "images/property6/1.jpg",
                 "images/property6/2.jpg",
@@ -154,7 +154,7 @@
             "description": "A modern three-bedroom riverside apartment offering stunning views and spacious living areas.",
             "location":"Hammersmith, London W6",
             "postcode": "W6",
-            "added": "2022-03-24",
+            "dateAdded": "2022-03-24",
             "images": [
                 "images/property7/1.jpg",
                 "images/property7/2.jpg",

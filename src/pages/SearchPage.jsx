@@ -9,7 +9,9 @@ function SearchPage() {
         maxBedrooms: 100,
         minPrice: 0,
         maxPrice: 10000000,
-        postcode: ""
+        postcode: "",
+        dateFrom: "",
+        dateTo: ""
     });
 
     useEffect(() => {
@@ -25,6 +27,16 @@ function SearchPage() {
     }, []);
 
     const filteredProperties = properties.filter((property) => {
+        const propertyDate = new Date(property.dateAdded);
+
+        const fromDateValid = 
+            filters.dateFrom === "" ||
+            propertyDate >= new Date(filters.dateFrom);
+
+        const toDateValid =
+            filters.dateTo === "" ||
+            propertyDate <= new Date(filters.dateTo);
+
         return (
             (filters.type === "all" || property.type === filters.type) &&
             
@@ -34,7 +46,10 @@ function SearchPage() {
             property.price >= filters.minPrice &&
             property.price <= filters.maxPrice &&
 
-            (filters.postcode === "" || property.postcode.startsWith(filters.postcode))
+            (filters.postcode === "" || property.postcode.startsWith(filters.postcode)) &&
+
+            fromDateValid &&
+            toDateValid
         );
     });
 
@@ -93,6 +108,22 @@ function SearchPage() {
                     placeholder="Max price"
                     onChange={(e) =>
                         setFilters({ ...filters, maxPrice: Number(e.target.value) })
+                    }
+                />
+
+                <input
+                    type="date"
+                    value={filters.dateFrom}
+                    onChange={(e) =>
+                        setFilters({ ...filters, dateFrom: e.target.value })
+                    }
+                />
+
+                <input
+                    type="date"
+                    value={filters.dateTo}
+                    onChange={(e) =>
+                        setFilters({ ...filters, dateTo: e.target.value })
                     }
                 />
             </div>
