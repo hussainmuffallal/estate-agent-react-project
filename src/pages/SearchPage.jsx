@@ -146,7 +146,17 @@ function SearchPage() {
             {/* Property list */}
             <div className="property-list">
                 {filteredProperties.map(property => (
-                    <div className="property-card" key={property.id}>
+                    <div 
+                        className="property-card" 
+                        key={property.id}
+                        draggable
+                        onDragStart={(e) =>
+                            e.dataTransfer.setData(
+                                "property",
+                                JSON.stringify(property)
+                            )
+                        }
+                    >
 
                         {/* Property image */}
                         <img
@@ -177,7 +187,22 @@ function SearchPage() {
             </div>
 
             {/* Favourites Sidebar */}
-            <aside className="favourites-sidebar">
+            <aside 
+                className="favourites-sidebar"
+                onDragOver={(e) => e.preventDefault()}
+                onDrop={(e) => {
+                    const droppedProperty = JSON.parse(
+                        e.dataTransfer.getData("property")
+                    );
+
+                    setFavourites(prev => {
+                        if (prev.find(item => item.id === droppedProperty.id)) {
+                            return prev; // prevent duplicates
+                        }
+                        return [...prev, droppedProperty];
+                    });
+                }}
+            >
                 <h2>Favourites</h2>
 
                 {favourites.length === 0 ? (
@@ -185,7 +210,17 @@ function SearchPage() {
                 ) : (
                     <>
                         {favourites.map(property => (
-                            <div key={property.id} className="favourites-item">
+                            <div 
+                                key={property.id} 
+                                className="favourites-item"
+                                draggable
+                                onDragStart={(e) => {
+                                    e.dataTransfer.setData(
+                                        "property",
+                                        JSON.stringify(property)
+                                    );
+                                }}
+                            >
                                 <p>{property.title}</p>
                                 <p>£{property.price.toLocaleString()}</p>
 
@@ -210,6 +245,26 @@ function SearchPage() {
                         </button>
                     </>
                 )}
+                <div 
+                    className="remove-zone"
+                    onDragOver={(e) => e.preventDefault()}
+                    onDrop={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation(); // The fix
+
+                        const droppedProperty = JSON.parse(
+                            e.dataTransfer.getData("property")
+                        );
+
+                        setFavourites(
+                            favourites.filter(
+                                item => item.id !== droppedProperty.id
+                            )
+                        );
+                    }}
+                >
+                    🗑️ Drag here to remove
+                </div>
             </aside>
         </div>
     );

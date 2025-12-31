@@ -113,7 +113,7 @@
 
 /* Favourites styling */
 .favourites-sidebar {
-  border-left: 2px solid #ddd;
+  border-left: 2px dashed #aaa;
   padding-left: 1rem;
 }
 
@@ -122,4 +122,13 @@
   padding: 0.5rem;
   margin-bottom: 0.5rem;
   background: #f9f9f9;
+}
+
+/* Remove zone styling */
+.remove-zone {
+  margin-top: 15px;
+  padding: 10px;
+  border: 2px dashed red;
+  text-align: center;
+  color: red;
 }
