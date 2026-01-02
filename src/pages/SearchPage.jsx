@@ -3,7 +3,10 @@ import { useEffect, useState } from "react";
 
 function SearchPage() {
     const [properties, setProperties] = useState([]);
-    const [favourites, setFavourites] = useState([]);
+    const [favourites, setFavourites] = useState(() => {
+        const stored = localStorage.getItem("favourites");
+        return stored ? JSON.parse(stored) : [];
+    });
     const [sortOption, setSortOption] = useState("none");
     const [filters, setFilters] = useState({
         type: "all",
@@ -38,9 +41,8 @@ function SearchPage() {
     }, []);
 
     useEffect(() => {
-        const storedFavourites = JSON.parse(localStorage.getItem("favourites")) || []
-        setFavourites(storedFavourites);
-    }, []);
+        localStorage.setItem("favourites", JSON.stringify(favourites));
+    }, [favourites]);
 
     const filteredProperties = properties.filter((property) => {
         const propertyDate = new Date(property.dateAdded);
