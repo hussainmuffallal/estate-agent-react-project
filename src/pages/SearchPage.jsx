@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 function SearchPage() {
     const [properties, setProperties] = useState([]);
     const [favourites, setFavourites] = useState([]);
-    
+    const [sortOption, setSortOption] = useState("none");
     const [filters, setFilters] = useState({
         type: "all",
         minBedrooms: 0,
@@ -67,6 +67,22 @@ function SearchPage() {
             fromDateValid &&
             toDateValid
         );
+    });
+
+    const sortedProperties = [...filteredProperties].sort((a, b) => {
+        if (sortOption === "price-asc") {
+            return a.price - b.price;
+        }
+
+        if (sortOption === "price-desc") {
+            return b.price - a.price;
+        }
+
+        if (sortOption === "date-desc") {
+            return new Date(b.dateAdded) - new Date(a.dateAdded);
+        }
+
+        return 0;
     });
 
     return (
@@ -147,12 +163,20 @@ function SearchPage() {
                             }
                         />
 
-                        
+                        <select
+                            value={sortOption}
+                            onChange={(e) => setSortOption(e.target.value)}
+                        >
+                            <option value="none">Sort by</option>
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                            <option value="date-desc">Newest first</option>
+                        </select>
                     </div>
                     
                     {/* Property list */}
                     <div className="property-list">
-                        {filteredProperties.map(property => (
+                        {sortedProperties.map(property => (
                             <div 
                                 className="property-card" 
                                 key={property.id}
