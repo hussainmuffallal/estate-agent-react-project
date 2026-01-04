@@ -21,7 +21,13 @@ function PropertyPage() {
                 const found = data.properties.find(
                     p => p.id === Number(id)
                 );
-                setProperty(found || null);
+                if (found) {
+                    setProperty(found);
+                    setMainImage(found.images[0]); // IMPORTANT
+                } else {
+                    setProperty(null);
+                }
+
 
             })
             .catch(err => {
@@ -98,7 +104,7 @@ function PropertyPage() {
                         width="100%"
                         height="300"
                         loading="lazy"
-                        src={`https://www.google.com/maps?q=${property.coordinates.lat},${property.lng}&output=embed`}
+                        src={`https://www.google.com/maps?q=${property.coordinates.lat},${property.coordinates.lng}&output=embed`}
                     />
                 </TabPanel>
             </Tabs>

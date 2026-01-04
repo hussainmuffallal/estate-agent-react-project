@@ -44,7 +44,7 @@ function SearchPage() {
         localStorage.setItem("favourites", JSON.stringify(favourites));
     }, [favourites]);
 
-    const filteredProperties = properties.filter((property) => {
+    const filteredProperties = (properties || []).filter((property) => {
         const propertyDate = new Date(property.dateAdded);
 
         const fromDateValid = 
@@ -242,7 +242,7 @@ function SearchPage() {
                     {favourites.length === 0 ? (
                         <p>No favourites yet</p>
                     ) : (
-                        <>
+                        <div data-testid="favourites">
                             {favourites.map(property => (
                                 <div 
                                     key={property.id} 
@@ -277,7 +277,7 @@ function SearchPage() {
                             >
                                 Clear favourites
                             </button>
-                        </>
+                        </div>
                     )}
                     <div 
                         className="remove-zone"
