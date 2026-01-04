@@ -12,16 +12,16 @@
             "postcode": "BR5",
             "dateAdded": "2022-10-12",
             "images": [
-                "images/property1/1.jpg",
-                "images/property1/2.jpg",
-                "images/property1/3.jpg",
-                "images/property1/4.jpg",
-                "images/property1/5.jpg",
-                "images/property1/6.jpg",
-                "images/property1/7.jpg"
+                "images/property1/1.webp",
+                "images/property1/2.webp",
+                "images/property1/3.webp",
+                "images/property1/4.webp",
+                "images/property1/5.webp",
+                "images/property1/6.webp",
+                "images/property1/7.webp"
             ],
 
-            "floorPlan": "/images/property1/floorplan.jpg",
+            "floorPlan": "/images/property1/floorplan.webp",
             "coordinates": { "lat": 51.3892, "lng": 0.0744 }
         },
 		{
@@ -36,16 +36,16 @@
             "postcode": "BR5",
             "dateAdded": "2022-09-14",
             "images": [
-                "images/property2/1.jpg",
-                "images/property2/2.jpg",
-                "images/property2/3.jpg",
-                "images/property2/4.jpg",
-                "images/property2/5.jpg",
-                "images/property2/6.jpg",
-                "images/property2/7.jpg"
+                "images/property2/1.webp",
+                "images/property2/2.webp",
+                "images/property2/3.webp",
+                "images/property2/4.webp",
+                "images/property2/5.webp",
+                "images/property2/6.webp",
+                "images/property2/7.webp"
             ],
 
-            "floorPlan": "/images/property2/floorplan.jpg",
+            "floorPlan": "/images/property2/floorplan.webp",
             "coordinates": { "lat": 51.3735, "lng": 0.0646 }
         },
         {
@@ -60,16 +60,16 @@
             "postcode": "NW1",
             "dateAdded": "2022-11-16",
             "images": [
-                "images/property3/1.jpg",
-                "images/property3/2.jpg",
-                "images/property3/3.jpg",
-                "images/property3/4.jpg",
-                "images/property3/5.jpg",
-                "images/property3/6.jpg",
-                "images/property3/7.jpg"
+                "images/property3/1.webp",
+                "images/property3/2.webp",
+                "images/property3/3.webp",
+                "images/property3/4.webp",
+                "images/property3/5.webp",
+                "images/property3/6.webp",
+                "images/property3/7.webp"
             ],
 
-            "floorPlan": "/images/property3/floorplan.jpg",
+            "floorPlan": "/images/property3/floorplan.webp",
             "coordinates": { "lat": 51.5413, "lng": -0.1420 }
         },
         {
@@ -84,16 +84,16 @@
             "postcode": "E1",
             "dateAdded": "2022-12-18",
             "images": [
-                "images/property4/1.jpg",
-                "images/property4/2.jpg",
-                "images/property4/3.jpg",
-                "images/property4/4.jpg",
-                "images/property4/5.jpg",
-                "images/property4/6.jpg",
-                "images/property4/7.jpg"
+                "images/property4/1.webp",
+                "images/property4/2.webp",
+                "images/property4/3.webp",
+                "images/property4/4.webp",
+                "images/property4/5.webp",
+                "images/property4/6.webp",
+                "images/property4/7.webp"
             ],
 
-            "floorPlan": "/images/property4/floorplan.jpg",
+            "floorPlan": "/images/property4/floorplan.webp",
             "coordinates": { "lat": 51.5194, "lng": -0.0598 }
         },
         {
@@ -108,16 +108,16 @@
             "postcode": "SW11",
             "dateAdded": "2022-01-20",
             "images": [
-                "images/property5/1.jpg",
-                "images/property5/2.jpg",
-                "images/property5/3.jpg",
-                "images/property5/4.jpg",
-                "images/property5/5.jpg",
-                "images/property5/6.jpg",
-                "images/property5/7.jpg"
+                "images/property5/1.webp",
+                "images/property5/2.webp",
+                "images/property5/3.webp",
+                "images/property5/4.webp",
+                "images/property5/5.webp",
+                "images/property5/6.webp",
+                "images/property5/7.webp"
             ],
 
-            "floorPlan": "/images/property5/floorplan.jpg",
+            "floorPlan": "/images/property5/floorplan.webp",
             "coordinates": { "lat": 51.4690, "lng": -0.1677 }
         },
         {
@@ -132,16 +132,16 @@
             "postcode": "SE1",
             "dateAdded": "2022-02-22",
             "images": [
-                "images/property6/1.jpg",
-                "images/property6/2.jpg",
-                "images/property6/3.jpg",
-                "images/property6/4.jpg",
-                "images/property6/5.jpg",
-                "images/property6/6.jpg",
-                "images/property6/7.jpg"
+                "images/property6/1.webp",
+                "images/property6/2.webp",
+                "images/property6/3.webp",
+                "images/property6/4.webp",
+                "images/property6/5.webp",
+                "images/property6/6.webp",
+                "images/property6/7.webp"
             ],
 
-            "floorPlan": "/images/property6/floorplan.jpg",
+            "floorPlan": "/images/property6/floorplan.webp",
             "coordinates": { "lat": 51.5055, "lng": -0.0910 }
         },
         {
@@ -156,16 +156,16 @@
             "postcode": "W6",
             "dateAdded": "2022-03-24",
             "images": [
-                "images/property7/1.jpg",
-                "images/property7/2.jpg",
-                "images/property7/3.jpg",
-                "images/property7/4.jpg",
-                "images/property7/5.jpg",
-                "images/property7/6.jpg",
-                "images/property7/7.jpg"
+                "images/property7/1.webp",
+                "images/property7/2.webp",
+                "images/property7/3.webp",
+                "images/property7/4.webp",
+                "images/property7/5.webp",
+                "images/property7/6.webp",
+                "images/property7/7.webp"
             ],
 
-            "floorPlan": "/images/property7/floorplan.jpg",
+            "floorPlan": "/images/property7/floorplan.webp",
             "coordinates": { "lat": 51.4920, "lng": -0.2230 }
         }
 ]}
