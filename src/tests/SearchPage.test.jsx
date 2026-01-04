@@ -129,15 +129,15 @@ test("clears all favourites", async () => {
 });
 
 
-// // Test-6: Persist favourites using localStorage (Distinction test)
-// test("loads favourites from localStorage on reload", () => {
-//   localStorage.setItem(
-//     "favourites",
-//     JSON.stringify([{ id: 1, title: "Test Property", price: 100000 }])
-//   );
+// Test-6: Persist favourites using localStorage (Distinction test)
+test("loads favourites from localStorage on reload", () => {
+  localStorage.setItem(
+    "favourites",
+    JSON.stringify([{ id: 1, title: "Test Property", price: 100000 }])
+  );
 
-//   renderPage();
+  renderPage();
 
-//   expect(screen.getByText(/test property/i)).toBeInTheDocument();
-// });
+  expect(screen.getByText(/test property/i)).toBeInTheDocument();
+});
 
