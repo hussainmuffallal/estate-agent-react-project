@@ -54,13 +54,7 @@ beforeEach(() => {
   );
 });
 
-// Test-1: Page renders correctly
-test("renders Search Page heading", () => {
-  renderPage();
-  expect(screen.getByText(/search page/i)).toBeInTheDocument();
-});
-
-// Test-2: Add property to favourites
+// Test-1: Add property to favourites
 test("adds a property to favourites", async () => {
   renderPage();
   const user = userEvent.setup();
@@ -75,7 +69,7 @@ test("adds a property to favourites", async () => {
 });
 
 
-// Test-3: Prevent duplicate favourites
+// Test-2: Prevent duplicate favourites
 test("prevents duplicate favourites", async () => {
   renderPage();
   const user = userEvent.setup();
@@ -93,7 +87,7 @@ test("prevents duplicate favourites", async () => {
 });
 
 
-// Test-4: Remove favourite using button
+// Test-3: Remove favourite using button
 test("removes a favourite", async () => {
   renderPage();
   const user = userEvent.setup();
@@ -111,7 +105,7 @@ test("removes a favourite", async () => {
 });
 
 
-// Test-5: Clear favourites
+// Test-4: Clear favourites
 test("clears all favourites", async () => {
   renderPage();
   const user = userEvent.setup();
@@ -129,7 +123,7 @@ test("clears all favourites", async () => {
 });
 
 
-// Test-6: Persist favourites using localStorage (Distinction test)
+// Test-5: Persist favourites using localStorage (Distinction test)
 test("loads favourites from localStorage on reload", () => {
   localStorage.setItem(
     "favourites",

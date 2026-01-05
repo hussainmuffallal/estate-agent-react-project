@@ -89,7 +89,8 @@ function SearchPage() {
 
     return (
         <div>
-            <h1>Search Page</h1>
+            <h1>Estate agent web</h1>
+            <p>Find your perfect home to live as you wish</p>
 
             <div className="page-layout">
                 {/* Main Content */}
@@ -97,83 +98,110 @@ function SearchPage() {
                     
                     {/* Filters */}
                     <div className="filters">
-                        <select
-                            value={filters.type}
-                            onChange={(e) =>
-                                setFilters({ ...filters, type: e.target.value })
-                            }
-                        >
-                            <option value="all">All Types</option>
-                            <option value="house">House</option>
-                            <option value="flat">Flat</option>
-                        </select>
+                        <label>
+                            <b>Property Type</b>
+                            <select
+                                value={filters.type}
+                                onChange={(e) =>
+                                    setFilters({ ...filters, type: e.target.value })
+                                }
+                            >
+                                <option value="all">All Types</option>
+                                <option value="house">House</option>
+                                <option value="flat">Flat</option>
+                            </select>
+                        </label>
+                        
+                        <label>
+                            <b>Postcode Area</b>
+                            <input
+                                type="text"
+                                placeholder="Postcode area (e.g. BR5)"
+                                value={filters.postcode}
+                                onChange={(e) =>
+                                    setFilters({ ...filters, postcode: e.target.value.toUpperCase() })
+                                }
+                            />
+                        </label>
 
-                        <input
-                            type="text"
-                            placeholder="Postcode area (e.g. BR5)"
-                            value={filters.postcode}
-                            onChange={(e) =>
-                                setFilters({ ...filters, postcode: e.target.value.toUpperCase() })
-                            }
-                        />
+                        <label>
+                            <b>Min Bedrooms</b>
+                            <input
+                                type="number"
+                                placeholder="Min bedrooms"
+                                onChange={(e) =>
+                                    setFilters({ ...filters, minBedrooms: Number(e.target.value) })
+                                }
+                            />
+                        </label>
 
-                        <input
-                            type="number"
-                            placeholder="Min bedrooms"
-                            onChange={(e) =>
-                                setFilters({ ...filters, minBedrooms: Number(e.target.value) })
-                            }
-                        />
+                        <label>
+                            <b>Max Bedrooms</b>
+                            <input
+                                type="number"
+                                placeholder="Max bedrooms"
+                                onChange={(e) =>
+                                    setFilters({ ...filters, maxBedrooms: Number(e.target.value) })
+                                }
+                            />
+                        </label>
 
-                        <input
-                            type="number"
-                            placeholder="Max bedrooms"
-                            onChange={(e) =>
-                                setFilters({ ...filters, maxBedrooms: Number(e.target.value) })
-                            }
-                        />
+                        <label>
+                            <b>Min Price</b>
+                            <input
+                                type="number"
+                                placeholder="Min price"
+                                onChange={(e) =>
+                                    setFilters({ ...filters, minPrice: Number(e.target.value) })
+                                }
+                            />
+                        </label>
+                        
+                        <label>
+                            <b>Max Price</b>
+                            <input
+                                type="number"
+                                placeholder="Max price"
+                                onChange={(e) =>
+                                    setFilters({ ...filters, maxPrice: Number(e.target.value) })
+                                }
+                            />
+                        </label>
+                        
+                        <label>
+                            <b>From</b>
+                            <input
+                                type="date"
+                                value={filters.dateFrom}
+                                onChange={(e) =>
+                                    setFilters({ ...filters, dateFrom: e.target.value })
+                                }
+                            />
+                        </label>
 
-                        <input
-                            type="number"
-                            placeholder="Min price"
-                            onChange={(e) =>
-                                setFilters({ ...filters, minPrice: Number(e.target.value) })
-                            }
-                        />
+                        <label>
+                            <b>To</b>
+                            <input
+                                type="date"
+                                value={filters.dateTo}
+                                onChange={(e) =>
+                                    setFilters({ ...filters, dateTo: e.target.value })
+                                }
+                            />
+                        </label>
 
-                        <input
-                            type="number"
-                            placeholder="Max price"
-                            onChange={(e) =>
-                                setFilters({ ...filters, maxPrice: Number(e.target.value) })
-                            }
-                        />
-
-                        <input
-                            type="date"
-                            value={filters.dateFrom}
-                            onChange={(e) =>
-                                setFilters({ ...filters, dateFrom: e.target.value })
-                            }
-                        />
-
-                        <input
-                            type="date"
-                            value={filters.dateTo}
-                            onChange={(e) =>
-                                setFilters({ ...filters, dateTo: e.target.value })
-                            }
-                        />
-
-                        <select
-                            value={sortOption}
-                            onChange={(e) => setSortOption(e.target.value)}
-                        >
-                            <option value="none">Sort by</option>
-                            <option value="price-asc">Price: Low to High</option>
-                            <option value="price-desc">Price: High to Low</option>
-                            <option value="date-desc">Newest first</option>
-                        </select>
+                        <label>
+                            <b>Sort By</b>
+                            <select
+                                value={sortOption}
+                                onChange={(e) => setSortOption(e.target.value)}
+                            >
+                                <option value="none">Sort by</option>
+                                <option value="price-asc">Price: Low to High</option>
+                                <option value="price-desc">Price: High to Low</option>
+                                <option value="date-desc">Newest first</option>
+                            </select>
+                        </label>
                     </div>
                     
                     {/* Property list */}
