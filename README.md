@@ -4,8 +4,4 @@ This website provides the facility to buy a properties based on their interest.
 
 ## Buyers has the facility to:
 
--View the properties
--Add to favourites
--Remove from favourites
--Availabity of floor plan
--Buyers can filter and sort the properties 
+-View the properties, add to favourites, remove from favourites, availabity of floor plan, buyers can filter and sort the properties. 
