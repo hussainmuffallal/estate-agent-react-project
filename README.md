@@ -27,9 +27,9 @@ A responsive estate agent web application that allows users to browse, search, f
 
 ## Repository and Live Demo:
 
--- Repository: https://github.com/hussainmuffallal/estate-agent-react-project
+*  Repository: https://github.com/hussainmuffallal/estate-agent-react-project
 
--- Live Demo: https://hussainmuffallal.github.io/estate-agent-react-project/
+*  Live Demo: https://hussainmuffallal.github.io/estate-agent-react-project/
 
 ## 🚀 Local Development
 
