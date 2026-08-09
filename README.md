@@ -1,14 +1,29 @@
 # Estate Agent Web App
 
-This website provides the facility to buy a properties based on their interest.
+A responsive estate agent web application that allows users to browse, search, filter, sort, and manage property listings and favourites.
 
-## Buyers has the facility to:
+## Tech Stack
 
-*   View the properties
-*   Add to favourites
-*   Remove from favourites
-*   Availabity of floor plan
-*   Buyers can filter and sort the properties. 
+- **Frontend:** React, JavaScript, HTML5, CSS3
+- **Routing:** React Router
+- **Testing:** Vitest, React Testing Library
+- **Build Tool:** Vite
+- **Data:** JSON
+- **Deployment:** GitHub Pages
+
+## Features
+
+*   View available properties
+*   Search and filter properties
+*   Sort properties by price and date
+*   View detailed property information
+*   Browse property image galleries
+*   View property floor plans
+*   View property locations on a map
+*   Add properties to favourites
+*   Remove properties from favourites
+*   Drag and drop properties into favourites
+*   Responsive design
 
 ## Repository and Github pages link:
 
