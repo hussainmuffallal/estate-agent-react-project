@@ -25,11 +25,11 @@ A responsive estate agent web application that allows users to browse, search, f
 *   Drag and drop properties into favourites
 *   Responsive design
 
-## Repository and Github pages link:
+## Repository and Live Demo:
 
--- Repository link: https://github.com/hussainmuffallal/estate-agent-react-project
+-- Repository: https://github.com/hussainmuffallal/estate-agent-react-project
 
--- Github Pages link: https://hussainmuffallal.github.io/estate-agent-react-project/
+-- Live Demo: https://hussainmuffallal.github.io/estate-agent-react-project/
 
 ## 🚀 Local Development
 
